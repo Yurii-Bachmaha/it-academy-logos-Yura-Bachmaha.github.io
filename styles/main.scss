@@ -1,0 +1,919 @@
+@import 'reset';
+@import 'mixins';
+@import 'fonts';
+@import 'variables';
+
+body{
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+header{
+    @include box (1440px, 700px);
+    background-image: url('../images/Background.png');
+    .header_logo{
+        @include box(1440px, 100px);
+        display: flex;
+        justify-content: space-between;
+        .header_name{
+            @include box(400px, 20px);
+            display: flex;
+            justify-content: flex-end;
+            font-family: 'Montserrat-Bold';
+            text-transform: uppercase;
+            color: $text-color-5;
+            font-size: 20px;
+            margin-top: 48px;
+        }
+        .header_login{
+            @include box(444px, 100px);
+            display: flex;
+            .header_login__login{
+                @include box(62px, 20px);
+                font-family: 'Montserrat';
+                font-weight: 400;
+                font-size: 14px;
+                color: $text-color-5;
+                margin-top: 52px;
+                cursor: pointer;
+            }
+            .header_login__signup{
+                @include box(88px, 33px);
+                margin-top: 40px;
+                line-height: 36px;
+                text-align: center;
+                border: 2px solid;
+                border-radius: 40px;
+                color: $text-color-5;
+                font-family: 'Montserrat';
+                font-weight: 400;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+    .header_title{
+        @include box(470px, 240px);
+        padding-top: 123px;
+        margin: 0 auto;
+        .header_title_text-1{
+            @include box(470px, 126px);
+            font-family: 'Montserrat-Bold';
+            font-size: 52px;
+            text-transform: uppercase;
+            color: $text-color-5;
+            line-height: 63px;
+            text-align: center;
+        }
+        .header_title_text-2{
+            @include box(470px, 24px);
+            font-family: 'Roboto light';
+            font-size: 24px;
+            text-align: center;
+            margin-top: 29px;
+            color: $text-color-1;
+        }
+        .header_title_text-3{
+            @include box(225px, 40px);
+            background: $button-color;
+            border-radius: 40px;
+            margin: 33px auto;
+            font-family: 'Montserrat-Bold';
+            font-size: 14px;
+            text-align: center;
+            line-height: 44px;
+            color: $text-color-5;
+            cursor: pointer;
+        }
+    }
+}
+
+.module, .module-2, .module-3, .module-4{
+    @include box(342px, 32px);
+    font-family: 'Montserrat-Bold';
+    font-size: 26px;
+    line-height: 32px;
+    margin-top: 89px;
+    padding-bottom: 34px;
+    color: $text-color-2;
+}
+
+.section{
+    @include box(940px, 400px);
+    display: flex;
+    justify-content: space-between;
+    .section_first, .section_second, .section_third{
+        @include box(300px, 400px);
+        background-image: url('../images/Step\ 1\ image.png');
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        .section_second_wrapper{
+            @include box(248px, 150px);
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            .step-2{
+                @include box(70px, 20px);
+                background: $button-color;
+                border-radius: 40px;
+                font-family: 'Montserrat';
+                font-weight: 400;
+                font-size: 10px;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 23px;
+                color: $text-color-5;
+                letter-spacing: 2px;
+            }
+            .text-1{
+                @include box(250px, 21px);
+                font-family: 'Montserrat';
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 26px;
+                color: $text-color-5;
+                letter-spacing: 0.7px;
+            }
+            .text-2{
+                @include box(250px, 60px);
+                font-family: 'Roboto light';
+                color: $text-color-3;
+                font-size: 14px;
+            }
+        } 
+        .section_first_wrapper, .section_third_wrapper{
+            @include box(248px, 180px);
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            .step-1, .step-3{
+                @include box(70px, 20px);
+                background: $button-color;
+                border-radius: 40px;
+                font-family: 'Montserrat';
+                font-weight: 400;
+                font-size: 10px;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 23px;
+                color: $text-color-5;
+                letter-spacing: 2px;
+            }
+            .text-1{
+                @include box(250px, 58px);
+                font-family: 'Montserrat';
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 26px;
+                color: $text-color-5;
+                letter-spacing: 0.5px;
+            }
+            .text-2{
+                @include box(250px, 60px);
+                font-family: 'Roboto light';
+                color: $text-color-3;
+                font-size: 14px;
+            }
+        }
+    }
+    .section_second{
+        background-image: url('../images/Step\ 2\ image.png');
+    }
+    .section_third{
+        background-image: url('../images/Step\ 3\ image.png');
+    }
+}
+ 
+.module-2{
+    width: 491px;
+}
+
+.section-2{
+    @include box(941px, 224px);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2px;
+    .section-2_first, .section-2_second{
+        @include box(221px, 216px);
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        align-content: space-between;
+        .section-2_first_image{
+            @include box(120px, 120px);
+            background-image: url('../images/Avatar.png')
+        }
+        .section-2_second_image{
+            @include box(120px, 120px);
+            background-image: url('../images/Avatar\ \(1\).png')
+        }
+        .section-2_first_name, .section-2_second_name{
+            @include box(221px, 18px);
+            font-family: 'Montserrat-Bold';
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: $text-color-2;
+        }
+        .section-2_first_text, .section-2_second_text{
+            @include box(221px, 38px);
+            font-family: 'Roboto light';
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            color: $text-color-4;
+        }
+    }
+    .section-2_third, .section-2_fourth{
+        @include box(221px, 224px);
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        align-content: space-between;
+        .section-2_third_image{
+            @include box(120px, 120px);
+            background-image: url('../images/Avatar\ \(2\).png');
+        }
+        .section-2_fourth_image{
+            @include box(120px, 120px);
+            background-image: url('../images/Avatar\ \(3\).png');
+        }
+        .section-2_third_name, .section-2_fourth_name{
+            @include box(221px, 24px);
+            font-family: 'Montserrat-Bold';
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: $text-color-2;
+        }
+        .section-2_third_text, .section-2_fourth_text{
+            @include box(221px, 41px);
+            font-family: 'Roboto light';
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            color: $text-color-4;
+        }
+    }
+}
+
+.see-other{
+    @include box(168px, 36px);
+    border: 2px solid $button-color;
+    border-radius: 40px;   
+    font-family: 'Montserrat-Bold'; 
+    font-size: 14px;
+    line-height: 17px;
+    color: $button-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+    padding-left: 8px;
+}
+
+.module-3{
+    width: 413px;
+}
+
+.section-3{
+    @include box(940px, 970px);
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    .dark-block{
+        @include box(300px, 310px);
+        background-color: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        border-radius: 4px;
+    }
+    .dark-block-2{
+        @include box(620px, 310px);
+        background-color: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        border-radius: 4px;
+    }
+    .section-3_image-1{
+        @include box(300px, 310px);
+        background-image: url('../images/Sport.png');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .section-3_image-1_text{
+            @include box(209px, 27px);
+            font-family: 'Montserrat-Bold';
+            font-size: 22px;
+            line-height: 27px;
+            color: $text-color-5;
+            z-index: 2;
+        }
+    }
+    .section-3_image-2{
+        @extend .section-3_image-1;
+        background-image: url('../images/Health.png');
+        .section-3_image-2_text{
+            @extend .section-3_image-1_text;
+            @include box(238px, 27px);
+        }
+    }
+    .section-3_image-3{
+        @extend .section-3_image-1;
+        background-image: url('../images/Extreme.png');
+        .section-3_image-3_text{
+            @extend .section-3_image-1_text;
+            @include box(187px, 54px);
+            text-align: center;
+        }
+    }
+    .section-3_image-4{
+        @extend .section-3_image-1;
+        background-image: url('../images/Games.png');
+        .section-3_image-4_text{
+            @extend .section-3_image-1_text;
+            @include box(80px, 27px);
+        }
+    }
+    .section-3_image-5{
+        @include box(620px, 310px);
+        background-image: url('../images/Culture.png');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .section-3_image-5_text{
+            @include box(261px, 27px);
+            font-family: 'Montserrat-Bold';
+            font-size: 22px;
+            line-height: 27px;
+            color: $text-color-5;
+            z-index: 2;
+        }
+    }
+    .section-3_image-6{
+        @extend .section-3_image-5;
+        background-image: url('../images/Relaxation.png');
+        .section-3_image-6_text{
+            @extend .section-3_image-5_text;
+            @include box(277px, 27px);
+        }
+    }
+    .section-3_image-7{
+        @extend .section-3_image-1;
+        background-image: url('../images/Trevelling.png');
+        .section-3_image-7_text{
+            @extend .section-3_image-1_text;
+            @include box(114px, 27px);
+        }
+    }
+}
+
+.module-4{
+    width: 358px;
+    padding-bottom: 54px;
+}
+
+.module-4_text{
+    @include box(415px, 24px);
+    font-family: 'Roboto light';
+    font-size: 18px;
+    line-height: 14px;
+    text-align: center;
+    padding-bottom: 15px;
+    color: $text-color-4;
+}
+
+.form{
+    @include box(481px, 40px);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    .form_enter{
+        @include box(280px, 30px);
+        padding-left: 12px;
+        padding-top: 5px;
+        border: 1px solid #D4D4D4;
+    }
+    ::-webkit-input-placeholder {font-family: 'Roboto light'; font-size: 14px;}
+    .form_button{
+        @include box(172px, 40px);
+        background: $button-color;
+        border-radius: 40px;
+        font-family: 'Montserrat-Bold';
+        text-align: center;font-size: 14px;
+        line-height: 43px;
+        color: $text-color-5;
+        cursor: pointer;
+    }
+}
+
+footer{
+    @include box (1440px, 224px);
+    border-top: 2px solid $button-color;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    .footer{
+        @include box(939px, 224px);
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer_logo{
+        @include box(117px, 13px);
+        background-image: url('../images/DREAMSHARE.png');
+    }
+    .footer_wrapper{
+        @include box(114px, 180px);
+        display: flex;
+        flex-direction: column;
+        margin-left: 123px;
+    }
+    .footer_wrapper_company{
+        font-family: 'Montserrat-Bold';
+        font-size: 14px;
+        padding-bottom: 19px;
+        color: $text-color-2;
+    }
+    .footer_wrapper_links{
+        text-decoration: none;
+        color: #999999;
+        font-family: 'Roboto light';
+        font-size: 14px;
+        padding-bottom: 12px;
+    }
+    .footer_partners{
+        @include box(100px, 100px);
+        @extend .footer_wrapper_company;
+        margin-left: 125px;
+    }
+    .footer_designed{
+        @include box(110px, 50px);
+        margin-left: 250px;
+        .footer_designed_text{
+            @include box(115px, 12px);
+            font-family: 'Montserrat-Bold';
+            text-transform: uppercase;
+            font-size: 10px;
+            color: #CCCCCC;
+            text-align: end;
+            letter-spacing: 1px;
+            padding-bottom: 5px
+        }
+    }
+    .footer_designed_image{
+        @include box(110px,24px);
+        background-image: url('../images/Bitmap.png');
+    }
+}
+
+@media (min-width: 321px) and (max-width: 768px){
+   
+    body{
+        width: 768px;
+    }
+
+    header{
+        width: 768px;
+        background-image: url('../images/Background-Tablet.png');
+        .header_logo{
+            width: 768px;
+            .header_name{
+                width: 201px;
+            }
+            .header_login{
+                width: 203px;
+            }
+        }
+    }
+
+    .module, .module-2, .module-3, .module-4{
+        @include box(289px, 27px);
+        font-size: 22px;
+        line-height: 27px;
+        margin-top: 94px;
+    }
+
+    .section{
+        @include box(748px, 400px);
+        .section_first, .section_second, .section_third{
+            @include box(236px, 400px);
+            .section_second_wrapper{
+                @include box(196px, 144px);
+                .text-1{
+                    @include box(196px, 36px);
+                    line-height: 14px;
+                }
+                .text-2{
+                    @include box(196px, 57px);
+                }
+            }
+            .section_first_wrapper, .section_third_wrapper{
+                @include box(196px, 194px);
+                .text-1{
+                    @include box(196px, 12px);
+                    line-height: 14px;
+                }
+                .text-2{
+                    @include box(196px, 70px);
+                }
+            }
+        }
+    }
+
+    .module-2{
+        width: 416px;
+    }
+
+    .section-2{
+        @include box(492px, 464px);
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-between;
+        .section-2_first, .section-2_second, .section-2_fourth{
+            @include box(236px, 205px);
+            .section-2_first_name, .section-2_second_name, .section-2_fourth_name{
+                height: 19px;
+            }
+            .section-2_first_text, .section-2_second_text, .section-2_fourth_text{
+                @include box(236px, 27px);
+            }
+        }
+        .section-2_third{
+            @include box(236px, 224px);
+            .section-2_third_text{
+                @include box(236px, 40px);
+            }
+        }
+    }
+
+    .see-other{
+        margin-top: 41px;
+        padding-left: 6px;
+    }
+
+    .module-3{
+        width: 350px;
+    }
+
+    .section-3{
+        @include box(748px, 970px);
+        .dark-block{
+            width: 236px;
+        }
+        .dark-block-2{
+            width: 492px;
+        }
+        .section-3_image-1{
+            width: 236px;
+            background-image: url('../images/Sport-Tablet.png');
+            .section-3_image-1_text{
+                @include box(208px, 80px);
+                text-align: center;
+            }
+        }
+        .section-3_image-2{
+            background-image: url('../images/Health-Tablet.png');
+            .section-3_image-2_text{
+                @extend .section-3_image-1_text;
+                height: 55px;
+            }
+        } 
+        
+        .section-3_image-3{
+            background-image: url('../images/Extreme-Tablet.png');
+            .section-3_image-3_text{
+                height: 55px;
+            }
+        }
+        .section-3_image-4{
+            background-image: url('../images/Games-Tablet.png');
+            .section-3_image-4_text{
+                height: 26px;
+            }
+        }
+        .section-3_image-5{
+            width: 492px;
+            background-image: url('../images/Culture-Tablet.png');
+        }
+        .section-3_image-6{
+            background-image: url('../images/Relaxation-Tablet.png');
+        }
+        .section-3_image-7{
+            background-image: url('../images/Traveling-Tablet.png');
+            .section-3_image-7_text{
+                height: 26px;
+            }
+        }
+
+    }
+
+    .module-4{
+        width: 302px;
+    }
+
+    .form{
+        width: 482px;
+    }
+
+    footer{
+        width: 768px;
+        .footer{
+            width: 688px;
+        }
+        .footer_wrapper{
+            margin-left: 29px;
+            margin-right: -25px;
+        }
+        .footer_partners{
+            margin-left: 0px;
+        }
+        .footer_designed{
+            margin-left: 0px;
+        }
+    }
+}
+
+@media (max-width: 320px){
+    body{
+        width: 320px;
+    }
+
+    header{
+        @include box(320px, 540px);
+        background-image: url('../images/Background-Mobile.png');
+        background-size: cover;
+        .header_logo{
+            @include box(320px, 178px);
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            .header_login{
+                @include box(153px, 36px);
+                .header_login__login{
+                    margin-top: 32px;
+                }
+                .header_login__signup{
+                    margin-top: 18px;
+                }
+            }
+            .header_name{
+                @include box(151px, 24px);
+            }
+        }
+
+        .header_title{
+            @include box(281px, 240px);
+            padding-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .header_title_text-1{
+                @include box(272px, 74px);
+                font-size: 30px;
+                line-height: 37px;
+            }
+            .header_title_text-2{
+                @include box(280px, 49px);
+                font-size: 18px;
+                line-height: 24px;
+                margin-top: 8px;
+            }
+            .header_title_text-3{
+                @include box(280px, 40px);
+                line-height: 40px;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .module, .module-2, .module-3, .module-4{
+        @include box(289px, 27px);
+        font-size: 22px;
+        line-height: 27px;
+        margin-top: 35px;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    .section{
+        @include box(300px, 738px);
+        display: flex;
+        flex-direction: column;
+        .dark{
+            @include box(300px, 240px);
+            background-color: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            border-radius: 4px;
+        }
+        .section_first, .section_second, .section_third{
+            @include box(300px, 240px);
+            .section_second_wrapper{
+                @include box(260px, 146px);
+                z-index: 2;
+                .text-1{
+                    @include box(250px, 19px);
+                }
+                .text-2{
+                    @include box(250px, 57px);
+                }
+            }
+            .section_first_wrapper{
+                @include box(260px, 177px);
+                z-index: 2;
+                .text-1{
+                    @include box(196px, 5px);
+                    line-height: 14px;
+                }
+                .text-2{
+                    height: 58px;
+                }
+            }
+            .section_third_wrapper{
+                @include box(260px, 175px);
+                z-index: 2;
+                .text-1{
+                    @include box(196px, 5px);
+                    line-height: 14px;
+                }
+                .text-2{
+                    height: 56px;
+                }
+            }
+        }
+        .section_first{
+            background-image: url('../images/Step\ 1\ mobile.png');
+        }
+        .section_second{
+            background-image: url('../images/Step\ 2\ mobile.png')
+        }
+        .section_third{
+            background-image: url('../images/Step\ 3\ mobile.png')
+        }
+    }
+    .module-2{
+        height: 54px;
+        line-height: 28px;
+    }
+
+    .section-2{
+        @include box(300px, 886px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .section-2_first, .section-2_second, .section-2_fourth{
+            @include box(236px, 205px);
+            .section-2_first_name, .section-2_second_name, .section-2_fourth_name{
+                height: 22px;
+            }
+            .section-2_first_text, .section-2_second_text, .section-2_fourth_text{
+                @include box(236px, 27px);
+            }
+        }
+        .section-2_third{
+            @include box(236px, 224px);
+            .section-2_third_text{
+                @include box(236px, 42px);
+            }
+        }
+        .section-2_first{
+            order: 1;
+        }
+        .section-2_second{
+            order: 3;
+        }
+        .section-2_third{
+            order: 2;
+        }
+        .section-2_fourth{
+            order: 4;
+        }
+    }
+
+    .see-other{
+        width: 270px;
+        padding-left: 4px;
+    }
+
+    .module-3{
+        width: 280px;
+        padding-bottom: 60px
+    }
+
+    .section-3{
+        @include box(300px, 900px);
+        .dark-block{
+            @include box(300px, 120px);
+        }
+        .dark-block-2{
+            @include box(300px, 120px);
+        }
+        .section-3_image-1{
+            @include box(300px, 120px);
+            background-image: url('../images/Sport-Mobile.png');
+            .section-3_image-1_text{
+                @include box(125px, 81px);
+                text-align: center;
+            }
+        }
+        .section-3_image-2{
+            background-image: url('../images/Health-Mobile.png');
+            .section-3_image-2_text{
+                @include box(155px, 55px);
+            }
+        }
+        .section-3_image-3{
+            background-image: url('../images/Extreme-Mobile.png');
+            .section-3_image-3_text{
+                @include box(187px, 55px);
+            }
+        }
+        .section-3_image-4{
+            background-image: url('../images/Games-Mobile.png');
+            .section-3_image-4_text{
+                height: 26px;
+            }
+        }
+        .section-3_image-5{
+            @include box (300px, 120px);
+            background-image: url('../images/Culture-Mobile.png');
+        }
+        .section-3_image-6{
+            background-image: url('../images/Relaxation-Mobile.png');
+        }
+        .section-3_image-7{
+            background-image: url('../images/Travelling-Mobile.png');
+            .section-3_image-7_text{
+                height: 26px;
+            }
+        }
+    }
+
+    .module-4{
+        padding-bottom: 46px;
+    }
+
+    .module-4_text{
+        padding-bottom: 6px;
+        width: 310px;
+    }
+
+    .form{
+        @include box(300px, 90px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 40px;
+        .form_enter{
+            @include box(263px, 30px);
+            padding-left: 12px;
+        }
+        .form_button{
+            width: 270px;
+            padding-left: 10px;
+        }
+    }
+
+    footer{
+        @include box(320px, 187px);
+        padding-top: 23px;
+        .footer{
+            @include box(320px, 187px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer_wrapper{
+            @include box(215px, 55px);
+            text-align: center;
+            margin: 17px 0;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .footer_wrapper_company{
+            padding-bottom: 8px;
+            width: 100%;
+        }
+        .footer_partners{
+            height: 20px;
+            margin-left: 0px;
+            text-align: center;
+        }
+        .footer_designed{
+            margin-left: 0px;
+            .footer_designed_text{
+                text-align: center;
+            }
+        }
+        #ml{
+            margin-left: 15px;
+        }
+        #mr{
+            margin-right: 15px;
+        }
+    }
+}
